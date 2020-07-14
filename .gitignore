@@ -1,0 +1,10 @@
+# node modules
+node_modules/
+
+# distributions
+out/
+build/
+
+
+# Error log
+yarn-error.log

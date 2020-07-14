@@ -1,0 +1,13 @@
+{
+  "name": "Simple_Chat_App",
+  "version": "1.0.0",
+  "description": "A simple chat app made using express.js and socket.io",
+  "main": "main.js",
+  "repository": "https://github.com/sauravk7077/Simple-Chat-App",
+  "author": "Saurav Kumar",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^2.3.0"
+  }
+}
