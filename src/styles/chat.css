@@ -16,7 +16,9 @@ body{
     display: flex;
     flex-direction: column;
     margin-top: 10px;
-    width: 500px;
+    background-color: hsl(23, 100%, 70%);
+    flex-basis: 700px;
+    padding-bottom: 20px;
 }
 
 /* Top Portion */
@@ -32,3 +34,41 @@ body{
     font-size: x-large;
     font-family: 'Courgette', cursive;
 }
+
+/* Middle Portion */
+
+.mainContent{
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.chats{
+    display: flex;
+    flex-basis: 500px;
+    background-color: hsl(23, 100%, 95%);
+    min-height: 200px;
+}
+
+.stats{
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Bottom */
+
+.controlBox{
+    display: flex;
+    justify-content: space-around;
+}
+.inputBox, .inputBox input{
+    display: flex;
+    flex-grow: 0.8;
+    justify-content: center;
+}
+.leave{
+    flex-grow: 0.1;
+}
+
