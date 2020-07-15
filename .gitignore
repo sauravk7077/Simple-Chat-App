@@ -8,3 +8,4 @@ build/
 
 # Error log
 yarn-error.log
+.vercel

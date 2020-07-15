@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2&family=Courgette&display=swap');
+
+*{
+    font-family: 'Baloo 2', cursive;
+}
+body{
+    height: 100vh;
+    overflow: hidden;
+    background-color: hsl(23, 100%, 95%);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    width: 500px;
+}
+
+/* Top Portion */
+
+.header{
+    display: flex;
+    flex-basis: 50px;
+    background-color: hsl(23, 100%, 60%);
+    padding-left: 20px;
+}
+
+.header .title h3{
+    font-size: x-large;
+    font-family: 'Courgette', cursive;
+}

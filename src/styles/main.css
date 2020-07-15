@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2&family=Courgette&display=swap');
+
+*{
+    font-family: 'Baloo 2', cursive;
+}
+body{
+    height: 100vh;
+    overflow: hidden;
+    background-color: hsl(23, 100%, 95%);
+    color: #fff;
+}
+body, .title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.title{
+    background-color: hsl(23, 100%, 60%);
+    font-size: xx-large;
+    text-align: center;
+    width: 100%;
+    font-weight: 800;
+    flex-basis: 100px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    
+}
+.title h3{
+    font-family: 'Courgette', cursive;
+    margin: 0;
+}
+.userBox, div.inputBox{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+div.inputBox{
+    justify-content: space-evenly;
+}
+.inputBox *{
+    margin: 5px;
+}
+
+.userBox{
+    background: hsl(23, 100%, 70%);
+    flex-basis: 500px;
+    justify-content: flex-start;
+    padding-bottom: 20px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
+input[type='text'], select, button{
+    width: 200px;
+    height: 30px;
+    box-sizing: border-box;
+    text-align: center;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+
+input[type='text']:focus, select:focus{
+    box-shadow: 0 0 5px 2px #999;
+}
+
+span{
+    padding-left: 5px;
+    width: 100%;
+    text-align: left;
+}
+
+

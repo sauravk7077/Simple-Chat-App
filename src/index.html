@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script> -->
+    <script src="/socket.io/socket.io.js"></script>
+    <link rel="stylesheet" href="styles/main.css">
+    <title>ChatBoom</title>
+</head>
+<body>
+    <form class="userBox" action="chat.html">
+        <div class="title"><h3>ChatBoom</h3></div>
+        <div class="inputBox">
+            <span>Username</span>
+            <input type="text" id="username" placeholder="Username"/>
+            <span>Select Room</span>
+            <select id="rooms">
+                <option value="Tomato">Tomato</option>
+                <option value="Potato">Potato</option>
+                <option value="Potato">Carrot</option>
+                <option value="Potato">Radish</option>
+            </select>
+            <button>Join</button>
+        </div>
+    </form>
+</body>
+<script src="index.js"></script>
+</html>
