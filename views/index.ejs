@@ -9,13 +9,13 @@
     <title>ChatBoom</title>
 </head>
 <body>
-    <form class="userBox" action="chat.html">
+    <form class="userBox" action="/chat" method="POST">
         <div class="title"><h3>ChatBoom</h3></div>
         <div class="inputBox">
             <span>Username</span>
-            <input type="text" id="username" placeholder="Username"/>
+            <input type="text" id="username" placeholder="Username" name='username' required/>
             <span>Select Room</span>
-            <select id="rooms">
+            <select id="rooms" name="rooms">
                 <option value="Tomato">Tomato</option>
                 <option value="Potato">Potato</option>
                 <option value="Potato">Carrot</option>
@@ -25,5 +25,4 @@
         </div>
     </form>
 </body>
-<script src="index.js"></script>
 </html>

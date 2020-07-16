@@ -48,9 +48,10 @@ body{
     justify-content: space-around;
 }
 
-.chats{
+#chats{
     display: flex;
     flex-basis: 500px;
+    flex-direction: column;
     background-color: hsl(23, 100%, 95%);
     max-height: 400px;
     overflow: auto;
