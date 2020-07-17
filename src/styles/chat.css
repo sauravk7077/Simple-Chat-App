@@ -2,6 +2,7 @@
 
 *{
     font-family: 'Baloo 2', cursive;
+    scroll-behavior: smooth;
 }
 body{
     height: 100vh;
@@ -73,6 +74,14 @@ body{
 .stats{
     display: flex;
     flex-direction: column;
+}
+
+/* Stats */
+
+#roomName{
+    background-color: hsl(23, 100%, 60%);
+    text-align: center;
+    
 }
 
 

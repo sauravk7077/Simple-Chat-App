@@ -2,6 +2,7 @@ const express = require('express');
 const socket = require('socket.io');
 const session = require('express-session');
 const fmsg = require('./others/messages'); //format message
+const {join, removeUser, getAllUsername, getCurrentUser} = require('./others/users');
 
 const app = express();
 
@@ -26,14 +27,35 @@ app.use(session({
 
 io.on('connection', (socket)=>{
     console.log('Connection is made');
-    socket.emit('message', fmsg('ChatBoom', "Welcome to ChatBoom."));
-    socket.broadcast.emit('message', fmsg('ChatBoom', `A user has joined the room.`));
-    socket.on('chat', (data)=>{
-        socket.broadcast.emit('chat', fmsg('User', data));
+
+    socket.on('joinRoom', ({username, room})=>{
+        let user = join(socket.id, username, room);
+        socket.join(user.room);
+        socket.emit('message', fmsg('ChatBoom', "Welcome to ChatBoom."));
+        socket.broadcast.to(user.room).emit('message', fmsg('ChatBoom', `${user.username} has joined the room.`));
+        socket.on('chat', (data)=>{
+            io.to(user.room).emit('message', fmsg(user.username, data));
+        });
+        io.to(user.room).emit('allUsers', {
+            usernames: getAllUsername()
+        });
+        
     });
     socket.on('disconnect', ()=>{
-        socket.broadcast.emit('message', fmsg("ChatBoom", `A user has disconnected`));
+        const user = removeUser(socket.id);
+        if(user)
+        {  
+            socket.broadcast
+            .to(user.room)
+            .emit('message', fmsg("ChatBoom", `${user.username} has disconnected`));
+
+            io.to(user.room).emit('allUsers', {
+                room: user.room,
+                usernames: getAllUsername()
+            });
+        }
     });
+    
 });
 
 
@@ -44,7 +66,7 @@ app.get('/', (req, res)=>{
 
 app.get('/chat', (req,res)=>{
     if(req.session.username){
-        res.render('chat');
+        res.render('chat', { username: req.session.username, room: req.session.room});
     }else{
         res.redirect('/');
     }
@@ -53,5 +75,5 @@ app.get('/chat', (req,res)=>{
 app.post('/chat', (req, res)=>{
     req.session.username = req.body.username;
     req.session.room = req.body.rooms;
-    res.render('chat');
+    res.render('chat', { username: req.body.username, room: req.body.rooms});
 });

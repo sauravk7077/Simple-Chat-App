@@ -6,6 +6,13 @@
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.4/qs.js" integrity="sha512-53y53BQwxZvk4YGd9SkHPqI7nDwlIIFZ4D2BSJG08Co7y6O3YsWeRtO6trPtdoyqfTCTkTbCulNosIAI6E4UvQ==" crossorigin="anonymous"></script>
     <script src="/socket.io/socket.io.js"></script>
+    <script>
+        var username = "<%= username %>";
+        var room = "<%= room %>";
+    </script>
+    <script>
+        
+    </script>
     <link rel="stylesheet" href="styles/chat.css">
     <title>ChatBoom</title>
 </head>
@@ -19,7 +26,7 @@
             </div>
             <div class="stats">
                 <span>Room Name</span>
-                <div id="roomName"></div>
+                <div id="roomName"><%= room %> </div>
                 <span>Users</span>
                 <div id="users"></div>
             </div>
@@ -29,7 +36,7 @@
                 <input type="text" id="input">
                 <button id="send">Send</button>
             </div>
-            <button class="leave">Leave Room</button>
+            <button id="leave">Leave Room</button>
         </div>
     </div>
 </body>
