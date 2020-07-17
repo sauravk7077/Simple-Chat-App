@@ -24,3 +24,5 @@ localhost:3000
 ```
 
 Enjoy the app 👏.
+
+![Image of the app](/simple_chat_app.png)
