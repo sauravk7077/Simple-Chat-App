@@ -78,7 +78,7 @@ body{
 
 /* Stats */
 
-#roomName{
+#roomName, .user{
     background-color: hsl(23, 100%, 60%);
     text-align: center;
     

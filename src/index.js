@@ -56,6 +56,6 @@ function displayData(object) {
 
 function showUsers(usernames) {
     usersDiv.innerHTML = `
-        ${usernames.map(u=>`<div class="user"> ${u} </div>`).join()}
-    `
+        ${usernames.map(u=>`<div class="user"> ${u} </div>`).join('')}
+    `;
 }
