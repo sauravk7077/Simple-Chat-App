@@ -51,6 +51,8 @@ function displayData(object) {
     msg.className = "message";
     msg.append(meta, message);
     chatsDiv.append(msg);
+    if(object.username == username)
+        msg.classList.add('self-message');
     chatsDiv.scrollTop = chatsDiv.scrollHeight;
 }
 

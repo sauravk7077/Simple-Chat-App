@@ -59,16 +59,26 @@ body{
 }
 
 .message{
-    background-color: hsl(23, 100%, 90%);
+    background-color: hsl(204, 100%, 90%);
     margin: 20px;
     padding-left: 10px;
     border-radius: 10px;
+
 }
+
 .message .meta{
-    color: hsl(23, 100%, 70%);
+    color: hsl(203, 99%, 70%);
+    margin: 10px 0 5px 0;
 }
 .message .text{
     color: hsl(23, 100%, 5%);
+    margin: 5px 0 5px 0;
+}
+.self-message{
+    background-color: hsl(23, 100%, 90%);
+}
+.self-message .meta{
+    color: hsl(23, 100%, 70%);
 }
 
 .stats{
@@ -78,10 +88,12 @@ body{
 
 /* Stats */
 
-#roomName, .user{
+#roomName, #users{
     background-color: hsl(23, 100%, 60%);
     text-align: center;
-    
+}
+.user{
+    margin:5px
 }
 
 

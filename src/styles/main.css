@@ -51,7 +51,7 @@ div.inputBox{
     border-top-right-radius: 50px;
 }
 
-input[type='text'], select, button{
+input[type='text'], input[type='submit'], select, button{
     width: 200px;
     height: 30px;
     box-sizing: border-box;
@@ -61,7 +61,7 @@ input[type='text'], select, button{
     border-radius: 5px;
 }
 
-input[type='text']:focus, select:focus{
+input[type='text']:focus,input[type='submit']:hover ,select:focus{
     box-shadow: 0 0 5px 2px #999;
 }
 
