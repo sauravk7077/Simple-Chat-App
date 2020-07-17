@@ -16,7 +16,7 @@ npm install
 
 * After installing the prerequisites, you are ready to run the app. To start the app, run the command below.
 ```
-npm start
+node main
 ```
 * Open this url on the browser
 ```
