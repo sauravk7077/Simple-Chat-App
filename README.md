@@ -11,7 +11,7 @@ git clone https://github.com/sauravk7077/Simple-Chat-App.git
 * Install all the prerequisites using npm
 
 ```
-cd simple-chat-app
+cd Simple-Chat-App
 npm install
 ```
 
